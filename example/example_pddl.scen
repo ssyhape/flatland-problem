@@ -1,0 +1,6 @@
+domain pddl
+# domain_file   problem_file
+example/pddl/pacman/pacman_bool.pddl    example/pddl/pacman/pb1.pddl
+example/pddl/pacman/pacman_bool.pddl    example/pddl/pacman/pb2.pddl
+example/pddl/pacman/pacman_bool.pddl    example/pddl/pacman/pb3.pddl
+

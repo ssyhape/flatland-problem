@@ -1,0 +1,10 @@
+domain graph
+# graph_file    start_node_id   goal_node_id    optimal_length
+example/graphmap/USA-road-d.NY.graph 1 5 -1
+example/graphmap/USA-road-d.NY.graph 5 1 -1
+example/graphmap/USA-road-d.NY.graph 1 2 -1
+example/graphmap/USA-road-d.NY.graph 100 1000 -1
+example/graphmap/USA-road-d.NY.graph 120 250 -1
+example/graphmap/USA-road-d.NY.graph 1000 20000 -1
+example/graphmap/USA-road-d.NY.graph 789 647 -1
+

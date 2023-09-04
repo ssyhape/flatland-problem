@@ -1,0 +1,5 @@
+domain grid4
+# Bucket	map	map width	map height	start column-coordinate	start row-coordinate	goal column-coordinate	goal row-coordinate	optimal length
+0   ./example/gridmap/empty-16-16.map  16  16  1   2  9   2   -1
+0   ./example/gridmap/empty-16-16.map  16  16  1   3  10   2   -1
+0   ./example/gridmap/empty-16-16.map  16  16  1   5  13   2   -1

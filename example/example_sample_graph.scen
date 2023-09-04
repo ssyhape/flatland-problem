@@ -1,0 +1,6 @@
+domain graph
+# graph_file    start_node_id   goal_node_id    optimal_length
+example/graphmap/sample.graph 1 5 -1
+example/graphmap/sample.graph 5 1 -1
+example/graphmap/sample.graph 1 2 -1
+
