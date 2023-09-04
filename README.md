@@ -1,61 +1,17 @@
-# Welcome to piglet
+## Introduction
+This project is based on the solution given in Assignment_1 in Monash University course 5222.
 
-## Requirement
+## Solution
+The detailed algorithm can be found in report.pdf. The following are the solutions to the problems that need to be solved and the methods used in the three cases.
 
-python >= 3.6
+### Q1
 
-## Install
+In this case, the problem that needs to be solved is the path planning problem for a single agent, because there is no need to consider the possibility of collision, so it is only necessary to use a simple A-star algorithm.
 
-1. Clone the repo to your machine
-2. Run:
+### Q2
 
-```
-$ python setup.py install
-```
+In this case, it is necessary to plan the path of multiple agents, and the way of consideration in this case is sequential, that is, the arrangement of the paths of the agents is one after another, which means that subsequent agents can Develop strategies based on previous strategies. In this part, I used the space-time A-star algorithm and the SIPP algorithm. The specific algorithm introduction can be found in report.pdf.
 
-## Usage
+### Q3
 
-### Commandline Interface
-
-```
-$ piglet.py --help
-```
-
-run a scenario:
-```
-$ python3 piglet.py -p ./example/example_n_puzzle_scenario.scen -f graph -s uniform  
-```
-
-### Piglet Library
-piglet provides a variety of flexible search algorithms. These algorithms are 
-able to help you to build your application.
-
-#### Example 
-
-To use an algorithm you need a domain instance, an expander instance and a search instance. 
-```python
-import os,sys
-from lib_piglet.domains import gridmap
-from lib_piglet.expanders.grid_expander import grid_expander
-from lib_piglet.search.tree_search import tree_search
-from lib_piglet.utils.data_structure import bin_heap,stack,queue
-
-mapfile = "./example/gridmap/empty-16-16.map"
-
-# create an instance of gridmap domain
-gm = gridmap.gridmap(mapfile)
-
-# create an instance of grid_expander and pass the girdmap instance to the expander.
-expander = grid_expander(gm)
-
-# create an instance of tree_search, and pass an open list (we use a binary heap here)
-# and the expander to it.
-search = tree_search(bin_heap(), expander)
-
-# start search by proving a start state and goal state. For gridmap a state is a (x,y) tuple 
-solution = search.get_path((1,2),(10,2))
-
-# print solution
-print(solution)
-
-```
+In this part, it is necessary to give an overall path planning solution for multi-agent, so here I consider using an improved version of GCBS based on CBS (collision detection search) to solve this problem, which can effectively solve problems of a certain scale. All solved. Due to time issues, the GCBS here is not an excellent solution to this problem. For subsequent improvement suggestions, I personally recommend using ECBS. Here is a search method that modifies the upper-level planning solution to focal A*. The specific implementation can be found in the paper.
